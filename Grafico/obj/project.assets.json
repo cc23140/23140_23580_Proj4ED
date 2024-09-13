@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\u23140\\source\\repos\\Grafico\\Grafico.csproj",
+      "projectUniqueName": "C:\\Users\\u23140\\Documents\\GitHub\\23140_23580_Proj4ED\\Grafico\\Grafico.csproj",
       "projectName": "Grafico",
-      "projectPath": "C:\\Users\\u23140\\source\\repos\\Grafico\\Grafico.csproj",
+      "projectPath": "C:\\Users\\u23140\\Documents\\GitHub\\23140_23580_Proj4ED\\Grafico\\Grafico.csproj",
       "packagesPath": "C:\\Users\\u23140\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\u23140\\source\\repos\\Grafico\\obj\\",
+      "outputPath": "C:\\Users\\u23140\\Documents\\GitHub\\23140_23580_Proj4ED\\Grafico\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

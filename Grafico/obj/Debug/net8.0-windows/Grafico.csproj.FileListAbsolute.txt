@@ -1,0 +1,7 @@
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.Form1.resources
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.csproj.GenerateResource.cache
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.AssemblyInfoInputs.cache
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.AssemblyInfo.cs
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.csproj.CoreCompileInputs.cache
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.sourcelink.json
