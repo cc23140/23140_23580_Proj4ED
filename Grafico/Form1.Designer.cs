@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             toolStrip1 = new ToolStrip();
-            stMensagem = new StatusStrip();
-            dlgAbrir = new OpenFileDialog();
-            dlgSalvar = new SaveFileDialog();
             toolStripButton1 = new ToolStripButton();
             toolStripButton2 = new ToolStripButton();
             toolStripButton3 = new ToolStripButton();
@@ -42,6 +39,9 @@
             toolStripButton7 = new ToolStripButton();
             toolStripButton8 = new ToolStripButton();
             toolStripButton9 = new ToolStripButton();
+            stMensagem = new StatusStrip();
+            dlgAbrir = new OpenFileDialog();
+            dlgSalvar = new SaveFileDialog();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,17 +54,6 @@
             toolStrip1.Size = new Size(800, 32);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
-            // 
-            // stMensagem
-            // 
-            stMensagem.Location = new Point(0, 428);
-            stMensagem.Name = "stMensagem";
-            stMensagem.Size = new Size(800, 22);
-            stMensagem.TabIndex = 1;
-            // 
-            // dlgAbrir
-            // 
-            dlgAbrir.FileName = "dlgAbrir";
             // 
             // toolStripButton1
             // 
@@ -147,6 +136,17 @@
             toolStripButton9.Size = new Size(29, 29);
             toolStripButton9.Text = "toolStripButton9";
             // 
+            // stMensagem
+            // 
+            stMensagem.Location = new Point(0, 428);
+            stMensagem.Name = "stMensagem";
+            stMensagem.Size = new Size(800, 22);
+            stMensagem.TabIndex = 1;
+            // 
+            // dlgAbrir
+            // 
+            dlgAbrir.FileName = "dlgAbrir";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -155,7 +155,7 @@
             Controls.Add(stMensagem);
             Controls.Add(toolStrip1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Desenho Gráfico";
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
