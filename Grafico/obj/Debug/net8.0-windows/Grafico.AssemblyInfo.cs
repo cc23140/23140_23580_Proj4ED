@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Grafico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a29a7d9855518ad2bb65fe71d17cac80985927c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Grafico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Grafico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

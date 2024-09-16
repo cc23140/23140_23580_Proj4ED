@@ -5,3 +5,14 @@ C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-wi
 C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.AssemblyInfo.cs
 C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.csproj.CoreCompileInputs.cache
 C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.sourcelink.json
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\bin\Debug\net8.0-windows\Grafico.exe
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\bin\Debug\net8.0-windows\Grafico.deps.json
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\bin\Debug\net8.0-windows\Grafico.runtimeconfig.json
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\bin\Debug\net8.0-windows\Grafico.dll
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\bin\Debug\net8.0-windows\Grafico.pdb
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.Properties.Resources.resources
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.dll
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\refint\Grafico.dll
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.pdb
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\Grafico.genruntimeconfig.cache
+C:\Users\u23140\Documents\GitHub\23140_23580_Proj4ED\Grafico\obj\Debug\net8.0-windows\ref\Grafico.dll

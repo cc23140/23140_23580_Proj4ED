@@ -26,5 +26,16 @@ namespace Grafico
             Pen pen = new Pen(cor);
             g.DrawEllipse(pen, base.X - raio, base.Y - raio, 2 * raio, 2 * raio);
         }
+
+        public override string ToString()
+        {
+            return transformaString("c", 5) +
+                transformaString(base.X, 5) +
+                transformaString(base.Y, 5) +
+                transformaString(raio, 5) +
+                transformaString(Cor.R, 5) +
+                transformaString(Cor.G, 5) +
+                transformaString(Cor.B, 5);
+        }
     }
 }

@@ -28,154 +28,212 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton4 = new ToolStripButton();
-            toolStripButton5 = new ToolStripButton();
-            toolStripButton6 = new ToolStripButton();
-            toolStripButton7 = new ToolStripButton();
-            toolStripButton8 = new ToolStripButton();
-            toolStripButton9 = new ToolStripButton();
+            btnAbrir = new ToolStripButton();
+            btnSalvar = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            btnPonto = new ToolStripButton();
+            btnReta = new ToolStripButton();
+            btnCirculo = new ToolStripButton();
+            btnElipse = new ToolStripButton();
+            btnRetangulo = new ToolStripButton();
+            btnPolilinha = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            btnCor = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            btnSair = new ToolStripButton();
             stMensagem = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            statusLabelMensagem = new ToolStripStatusLabel();
+            toolStripStatusLabel3 = new ToolStripStatusLabel();
+            statusLabel = new ToolStripStatusLabel();
             dlgAbrir = new OpenFileDialog();
             dlgSalvar = new SaveFileDialog();
-            toolStripSeparator1 = new ToolStripSeparator();
-            toolStripSeparator2 = new ToolStripSeparator();
-            toolStripSeparator3 = new ToolStripSeparator();
+            pbAreaDesenho = new PictureBox();
             toolStrip1.SuspendLayout();
+            stMensagem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbAreaDesenho).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(25, 25);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripSeparator1, toolStripButton3, toolStripButton4, toolStripButton5, toolStripButton6, toolStripButton7, toolStripSeparator2, toolStripButton8, toolStripSeparator3, toolStripButton9 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnAbrir, btnSalvar, toolStripSeparator1, btnPonto, btnReta, btnCirculo, btnElipse, btnRetangulo, btnPolilinha, toolStripSeparator2, btnCor, toolStripSeparator3, btnSair });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 32);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnAbrir
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(29, 29);
-            toolStripButton1.Text = "toolStripButton1";
+            btnAbrir.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAbrir.Image = Properties.Resources.arquivo;
+            btnAbrir.ImageTransparentColor = Color.Magenta;
+            btnAbrir.Name = "btnAbrir";
+            btnAbrir.Size = new Size(29, 29);
+            btnAbrir.Text = "toolStripButton1";
+            btnAbrir.Click += btnAbrir_Click;
             // 
-            // toolStripButton2
+            // btnSalvar
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(29, 29);
-            toolStripButton2.Text = "toolStripButton2";
-            // 
-            // toolStripButton3
-            // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(29, 29);
-            toolStripButton3.Text = "toolStripButton3";
-            // 
-            // toolStripButton4
-            // 
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(29, 29);
-            toolStripButton4.Text = "toolStripButton4";
-            // 
-            // toolStripButton5
-            // 
-            toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(29, 29);
-            toolStripButton5.Text = "toolStripButton5";
-            // 
-            // toolStripButton6
-            // 
-            toolStripButton6.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton6.Image = (Image)resources.GetObject("toolStripButton6.Image");
-            toolStripButton6.ImageTransparentColor = Color.Magenta;
-            toolStripButton6.Name = "toolStripButton6";
-            toolStripButton6.Size = new Size(29, 29);
-            toolStripButton6.Text = "toolStripButton6";
-            // 
-            // toolStripButton7
-            // 
-            toolStripButton7.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton7.Image = (Image)resources.GetObject("toolStripButton7.Image");
-            toolStripButton7.ImageTransparentColor = Color.Magenta;
-            toolStripButton7.Name = "toolStripButton7";
-            toolStripButton7.Size = new Size(29, 29);
-            toolStripButton7.Text = "toolStripButton7";
-            // 
-            // toolStripButton8
-            // 
-            toolStripButton8.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton8.Image = (Image)resources.GetObject("toolStripButton8.Image");
-            toolStripButton8.ImageTransparentColor = Color.Magenta;
-            toolStripButton8.Name = "toolStripButton8";
-            toolStripButton8.Size = new Size(29, 29);
-            toolStripButton8.Text = "toolStripButton8";
-            // 
-            // toolStripButton9
-            // 
-            toolStripButton9.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton9.Image = (Image)resources.GetObject("toolStripButton9.Image");
-            toolStripButton9.ImageTransparentColor = Color.Magenta;
-            toolStripButton9.Name = "toolStripButton9";
-            toolStripButton9.Size = new Size(29, 29);
-            toolStripButton9.Text = "toolStripButton9";
-            // 
-            // stMensagem
-            // 
-            stMensagem.Location = new Point(0, 428);
-            stMensagem.Name = "stMensagem";
-            stMensagem.Size = new Size(800, 22);
-            stMensagem.TabIndex = 1;
-            // 
-            // dlgAbrir
-            // 
-            dlgAbrir.FileName = "dlgAbrir";
+            btnSalvar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnSalvar.Image = Properties.Resources.editar;
+            btnSalvar.ImageTransparentColor = Color.Magenta;
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(29, 29);
+            btnSalvar.Text = "toolStripButton2";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 32);
             // 
+            // btnPonto
+            // 
+            btnPonto.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnPonto.Image = Properties.Resources.ponto_final;
+            btnPonto.ImageTransparentColor = Color.Magenta;
+            btnPonto.Name = "btnPonto";
+            btnPonto.Size = new Size(29, 29);
+            btnPonto.Text = "toolStripButton3";
+            // 
+            // btnReta
+            // 
+            btnReta.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReta.Image = Properties.Resources.linha_diagonal__1_;
+            btnReta.ImageTransparentColor = Color.Magenta;
+            btnReta.Name = "btnReta";
+            btnReta.Size = new Size(29, 29);
+            btnReta.Text = "toolStripButton4";
+            // 
+            // btnCirculo
+            // 
+            btnCirculo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnCirculo.Image = Properties.Resources.circulo;
+            btnCirculo.ImageTransparentColor = Color.Magenta;
+            btnCirculo.Name = "btnCirculo";
+            btnCirculo.Size = new Size(29, 29);
+            btnCirculo.Text = "toolStripButton5";
+            // 
+            // btnElipse
+            // 
+            btnElipse.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnElipse.Image = Properties.Resources.variante_de_forma_de_contorno_de_elipse;
+            btnElipse.ImageTransparentColor = Color.Magenta;
+            btnElipse.Name = "btnElipse";
+            btnElipse.Size = new Size(29, 29);
+            btnElipse.Text = "toolStripButton1";
+            // 
+            // btnRetangulo
+            // 
+            btnRetangulo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnRetangulo.Image = Properties.Resources.contorno_de_forma_retangular;
+            btnRetangulo.ImageTransparentColor = Color.Magenta;
+            btnRetangulo.Name = "btnRetangulo";
+            btnRetangulo.Size = new Size(29, 29);
+            btnRetangulo.Text = "toolStripButton6";
+            // 
+            // btnPolilinha
+            // 
+            btnPolilinha.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnPolilinha.Image = Properties.Resources.cadeia_poligonal;
+            btnPolilinha.ImageTransparentColor = Color.Magenta;
+            btnPolilinha.Name = "btnPolilinha";
+            btnPolilinha.Size = new Size(29, 29);
+            btnPolilinha.Text = "toolStripButton7";
+            // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 32);
+            // 
+            // btnCor
+            // 
+            btnCor.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnCor.Image = Properties.Resources.paleta_de_cores;
+            btnCor.ImageTransparentColor = Color.Magenta;
+            btnCor.Name = "btnCor";
+            btnCor.Size = new Size(29, 29);
+            btnCor.Text = "toolStripButton8";
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(6, 32);
             // 
+            // btnSair
+            // 
+            btnSair.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnSair.Image = Properties.Resources.log_out__1_;
+            btnSair.ImageTransparentColor = Color.Magenta;
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(29, 29);
+            btnSair.Text = "toolStripButton9";
+            // 
+            // stMensagem
+            // 
+            stMensagem.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, statusLabelMensagem, toolStripStatusLabel3, statusLabel });
+            stMensagem.Location = new Point(0, 428);
+            stMensagem.Name = "stMensagem";
+            stMensagem.Size = new Size(800, 22);
+            stMensagem.TabIndex = 1;
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(71, 17);
+            toolStripStatusLabel1.Text = "Mensagem:";
+            // 
+            // statusLabelMensagem
+            // 
+            statusLabelMensagem.Name = "statusLabelMensagem";
+            statusLabelMensagem.Size = new Size(93, 17);
+            statusLabelMensagem.Text = "Sem Mensagens";
+            // 
+            // toolStripStatusLabel3
+            // 
+            toolStripStatusLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            toolStripStatusLabel3.Size = new Size(76, 17);
+            toolStripStatusLabel3.Text = "Coordenada:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(33, 17);
+            statusLabel.Text = "(0, 0)";
+            // 
+            // dlgAbrir
+            // 
+            dlgAbrir.FileName = "dlgAbrir";
+            // 
+            // pbAreaDesenho
+            // 
+            pbAreaDesenho.Location = new Point(0, 35);
+            pbAreaDesenho.Name = "pbAreaDesenho";
+            pbAreaDesenho.Size = new Size(800, 390);
+            pbAreaDesenho.TabIndex = 2;
+            pbAreaDesenho.TabStop = false;
+            pbAreaDesenho.Paint += pbAreaDesenho_Paint;
+            pbAreaDesenho.MouseMove += pbAreaDesenho_MouseMove;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pbAreaDesenho);
             Controls.Add(stMensagem);
             Controls.Add(toolStrip1);
             Name = "Form1";
             Text = "Desenho Gráfico";
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            stMensagem.ResumeLayout(false);
+            stMensagem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbAreaDesenho).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,20 +241,26 @@
         #endregion
 
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton4;
-        private ToolStripButton toolStripButton5;
+        private ToolStripButton btnAbrir;
+        private ToolStripButton btnSalvar;
+        private ToolStripButton btnPonto;
+        private ToolStripButton btnReta;
+        private ToolStripButton btnCirculo;
         private StatusStrip stMensagem;
         private OpenFileDialog dlgAbrir;
         private SaveFileDialog dlgSalvar;
-        private ToolStripButton toolStripButton6;
-        private ToolStripButton toolStripButton7;
-        private ToolStripButton toolStripButton8;
-        private ToolStripButton toolStripButton9;
+        private ToolStripButton btnRetangulo;
+        private ToolStripButton btnPolilinha;
+        private ToolStripButton btnCor;
+        private ToolStripButton btnSair;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton btnElipse;
+        private PictureBox pbAreaDesenho;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel statusLabelMensagem;
+        private ToolStripStatusLabel toolStripStatusLabel3;
+        private ToolStripStatusLabel statusLabel;
     }
 }
