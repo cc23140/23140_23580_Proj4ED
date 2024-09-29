@@ -21,7 +21,7 @@ namespace Grafico
                     StreamReader arqFiguras = new StreamReader(dlgAbrir.FileName);
                     String linha = arqFiguras.ReadLine();
 
-                    //Informações do quadro no momento que foi salvo é mostrado!
+                    //InformaÃ§Ãµes do quadro no momento que foi salvo Ã© mostrado!
                     double xInfEsq = Convert.ToDouble(linha.Substring(0, 5).Trim());
                     double yInfEsq = Convert.ToDouble(linha.Substring(5, 5).Trim());
                     double xSupDir = Convert.ToDouble(linha.Substring(10, 5).Trim());
@@ -41,22 +41,22 @@ namespace Grafico
 
                         switch (tipo[0])
                         {
-                            case 'p': //figura é um ponto
+                            case 'p': //figura Ã© um ponto
                                 figuras.InserirAposFim(new Ponto(xBase, yBase, cor));
                                 break;
 
-                            case 'l': //figura é uma reta
+                            case 'l': //figura Ã© uma reta
                                 int xFinal = Convert.ToInt32(linha.Substring(30, 5).Trim());
                                 int yFinal = Convert.ToInt32(linha.Substring(35, 5).Trim());
                                 figuras.InserirAposFim(new Reta(xBase, yBase, xFinal, yFinal, cor));
                                 break;
 
-                            case 'c': //figura é um círculo
+                            case 'c': //figura Ã© um cÃ­rculo
                                 int raio = Convert.ToInt32(linha.Substring(30, 5).Trim());
                                 figuras.InserirAposFim(new Circulo(xBase, yBase, raio, cor));
                                 break;
 
-                            case 'e': //figura é uma elipse
+                            case 'e': //figura Ã© uma elipse
                                 //TODO
                                 break;
                         }
@@ -102,5 +102,14 @@ namespace Grafico
         {
             stMensagem.Items[3].Text = "(" + e.X + ", " + e.Y + ")";
         }
+
+        private void btnPonto_Click(object sender, EventArgs e){
+            stMensagem.Items[1].Text = "Clique no local do ponto desejado";
+            limparEsperas();
+            esperaPonto = true;
+
+
+         }
+
     }
 }
