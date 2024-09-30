@@ -28,6 +28,11 @@ public class ListaSimples<Dado>
             atual = atual.Prox;
         }
     }
+
+    public void PercorrerUmElementoLista()
+    {
+        atual = atual.Prox;
+    }
     public bool EstaVazia
     {
         get => primeiro == null;
@@ -86,22 +91,14 @@ public class ListaSimples<Dado>
         }
     }
 
-    public void iniciarPercursoSequencial()
+    public void IniciarPercursoSequencial()
     {
         atual = primeiro;
     }
 
-    public bool podePercorrer()
+    public bool PodePercorrer()
     {
-        if (atual != null)
-        {
-            atual = atual.Prox;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return atual != null;
     }
 
 

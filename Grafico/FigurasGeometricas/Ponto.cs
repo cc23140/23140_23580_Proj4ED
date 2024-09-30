@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grafico
+namespace Grafico.FigurasGeometricas
 {
     class Ponto : IComparable<Ponto>
     {
@@ -20,22 +20,23 @@ namespace Grafico
 
         public virtual void Desenhar(Color cor, Graphics g) //É colocado virtual para que o método seja sobrescrito depois
         {
-            Pen pen = new Pen(cor);
-            g.DrawLine(pen, x, y, x, y);
+            Brush brush = new SolidBrush(cor);
+            g.FillEllipse(brush, x - 4, y - 4, 8, 8);
+            //g.DrawLine(pen, x, y, x, y);
         }
 
 
-        public String transformaString(int valor, int qntasPosicoes)
+        public string transformaString(int valor, int qntasPosicoes)
         {
-            String cadeia = valor + "";
+            string cadeia = valor + "";
             while (cadeia.Length < qntasPosicoes)
                 cadeia = "0" + cadeia;
             return cadeia.Substring(0, qntasPosicoes);
         }
 
-        public String transformaString(String valor, int qntasPosicoes)
+        public string transformaString(string valor, int qntasPosicoes)
         {
-            String cadeia = valor;
+            string cadeia = valor;
             while (cadeia.Length < qntasPosicoes)
                 cadeia = cadeia + " ";
             return cadeia.Substring(0, qntasPosicoes);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             toolStrip1 = new ToolStrip();
             btnAbrir = new ToolStripButton();
             btnSalvar = new ToolStripButton();
@@ -42,6 +43,8 @@
             btnCor = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
             btnSair = new ToolStripButton();
+            toolStripSeparator4 = new ToolStripSeparator();
+            btnApagarTudo = new ToolStripButton();
             stMensagem = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             statusLabelMensagem = new ToolStripStatusLabel();
@@ -50,6 +53,7 @@
             dlgAbrir = new OpenFileDialog();
             dlgSalvar = new SaveFileDialog();
             pbAreaDesenho = new PictureBox();
+            cdlgSelecionarCor = new ColorDialog();
             toolStrip1.SuspendLayout();
             stMensagem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAreaDesenho).BeginInit();
@@ -57,11 +61,12 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.Dock = DockStyle.None;
             toolStrip1.ImageScalingSize = new Size(25, 25);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnAbrir, btnSalvar, toolStripSeparator1, btnPonto, btnReta, btnCirculo, btnElipse, btnRetangulo, btnPolilinha, toolStripSeparator2, btnCor, toolStripSeparator3, btnSair });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnAbrir, btnSalvar, toolStripSeparator1, btnPonto, btnReta, btnCirculo, btnElipse, btnRetangulo, btnPolilinha, toolStripSeparator2, btnCor, toolStripSeparator3, btnSair, toolStripSeparator4, btnApagarTudo });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 32);
+            toolStrip1.Size = new Size(386, 32);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -97,6 +102,7 @@
             btnPonto.Name = "btnPonto";
             btnPonto.Size = new Size(29, 29);
             btnPonto.Text = "toolStripButton3";
+            btnPonto.Click += btnPonto_Click_1;
             // 
             // btnReta
             // 
@@ -106,6 +112,7 @@
             btnReta.Name = "btnReta";
             btnReta.Size = new Size(29, 29);
             btnReta.Text = "toolStripButton4";
+            btnReta.Click += btnReta_Click;
             // 
             // btnCirculo
             // 
@@ -115,6 +122,7 @@
             btnCirculo.Name = "btnCirculo";
             btnCirculo.Size = new Size(29, 29);
             btnCirculo.Text = "toolStripButton5";
+            btnCirculo.Click += btnCirculo_Click;
             // 
             // btnElipse
             // 
@@ -124,6 +132,7 @@
             btnElipse.Name = "btnElipse";
             btnElipse.Size = new Size(29, 29);
             btnElipse.Text = "toolStripButton1";
+            btnElipse.Click += btnElipse_Click;
             // 
             // btnRetangulo
             // 
@@ -133,6 +142,7 @@
             btnRetangulo.Name = "btnRetangulo";
             btnRetangulo.Size = new Size(29, 29);
             btnRetangulo.Text = "toolStripButton6";
+            btnRetangulo.Click += btnRetangulo_Click;
             // 
             // btnPolilinha
             // 
@@ -142,6 +152,7 @@
             btnPolilinha.Name = "btnPolilinha";
             btnPolilinha.Size = new Size(29, 29);
             btnPolilinha.Text = "toolStripButton7";
+            btnPolilinha.Click += btnPolilinha_Click;
             // 
             // toolStripSeparator2
             // 
@@ -156,6 +167,7 @@
             btnCor.Name = "btnCor";
             btnCor.Size = new Size(29, 29);
             btnCor.Text = "toolStripButton8";
+            btnCor.Click += btnCor_Click;
             // 
             // toolStripSeparator3
             // 
@@ -170,13 +182,31 @@
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(29, 29);
             btnSair.Text = "toolStripButton9";
+            btnSair.Click += btnSair_Click;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 32);
+            // 
+            // btnApagarTudo
+            // 
+            btnApagarTudo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnApagarTudo.Image = (Image)resources.GetObject("btnApagarTudo.Image");
+            btnApagarTudo.ImageTransparentColor = Color.Magenta;
+            btnApagarTudo.Name = "btnApagarTudo";
+            btnApagarTudo.Size = new Size(29, 29);
+            btnApagarTudo.Text = "toolStripButton1";
+            btnApagarTudo.Click += btnApagarTudo_Click;
             // 
             // stMensagem
             // 
+            stMensagem.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            stMensagem.Dock = DockStyle.None;
             stMensagem.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, statusLabelMensagem, toolStripStatusLabel3, statusLabel });
-            stMensagem.Location = new Point(0, 428);
+            stMensagem.Location = new Point(0, 539);
             stMensagem.Name = "stMensagem";
-            stMensagem.Size = new Size(800, 22);
+            stMensagem.Size = new Size(290, 22);
             stMensagem.TabIndex = 1;
             // 
             // toolStripStatusLabel1
@@ -211,22 +241,25 @@
             // 
             // pbAreaDesenho
             // 
+            pbAreaDesenho.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pbAreaDesenho.Location = new Point(0, 35);
             pbAreaDesenho.Name = "pbAreaDesenho";
-            pbAreaDesenho.Size = new Size(800, 390);
+            pbAreaDesenho.Size = new Size(800, 501);
             pbAreaDesenho.TabIndex = 2;
             pbAreaDesenho.TabStop = false;
             pbAreaDesenho.Paint += pbAreaDesenho_Paint;
+            pbAreaDesenho.MouseClick += pbAreaDesenho_MouseClick;
             pbAreaDesenho.MouseMove += pbAreaDesenho_MouseMove;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 561);
             Controls.Add(pbAreaDesenho);
             Controls.Add(stMensagem);
             Controls.Add(toolStrip1);
+            MinimumSize = new Size(600, 600);
             Name = "Form1";
             Text = "Desenho Gráfico";
             toolStrip1.ResumeLayout(false);
@@ -262,5 +295,8 @@
         private ToolStripStatusLabel statusLabelMensagem;
         private ToolStripStatusLabel toolStripStatusLabel3;
         private ToolStripStatusLabel statusLabel;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripButton btnApagarTudo;
+        private ColorDialog cdlgSelecionarCor;
     }
 }
