@@ -54,6 +54,10 @@
             dlgSalvar = new SaveFileDialog();
             pbAreaDesenho = new PictureBox();
             cdlgSelecionarCor = new ColorDialog();
+            label1 = new Label();
+            btnUnicaSelecao = new Button();
+            btnTodasSelecoes = new Button();
+            lbFiguraSelecionada = new ListBox();
             toolStrip1.SuspendLayout();
             stMensagem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAreaDesenho).BeginInit();
@@ -66,7 +70,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnAbrir, btnSalvar, toolStripSeparator1, btnPonto, btnReta, btnCirculo, btnElipse, btnRetangulo, btnPolilinha, toolStripSeparator2, btnCor, toolStripSeparator3, btnSair, toolStripSeparator4, btnApagarTudo });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(386, 32);
+            toolStrip1.Size = new Size(355, 32);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -251,11 +255,51 @@
             pbAreaDesenho.MouseClick += pbAreaDesenho_MouseClick;
             pbAreaDesenho.MouseMove += pbAreaDesenho_MouseMove;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(368, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Selecionar:";
+            // 
+            // btnUnicaSelecao
+            // 
+            btnUnicaSelecao.Location = new Point(564, 6);
+            btnUnicaSelecao.Name = "btnUnicaSelecao";
+            btnUnicaSelecao.Size = new Size(108, 23);
+            btnUnicaSelecao.TabIndex = 5;
+            btnUnicaSelecao.Text = "Única Seleção";
+            btnUnicaSelecao.UseVisualStyleBackColor = true;
+            // 
+            // btnTodasSelecoes
+            // 
+            btnTodasSelecoes.Location = new Point(678, 6);
+            btnTodasSelecoes.Name = "btnTodasSelecoes";
+            btnTodasSelecoes.Size = new Size(117, 23);
+            btnTodasSelecoes.TabIndex = 6;
+            btnTodasSelecoes.Text = "Todas as Seleções";
+            btnTodasSelecoes.UseVisualStyleBackColor = true;
+            // 
+            // lbFiguraSelecionada
+            // 
+            lbFiguraSelecionada.FormattingEnabled = true;
+            lbFiguraSelecionada.ItemHeight = 15;
+            lbFiguraSelecionada.Location = new Point(438, 9);
+            lbFiguraSelecionada.Name = "lbFiguraSelecionada";
+            lbFiguraSelecionada.Size = new Size(120, 19);
+            lbFiguraSelecionada.TabIndex = 7;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 561);
+            Controls.Add(lbFiguraSelecionada);
+            Controls.Add(btnTodasSelecoes);
+            Controls.Add(btnUnicaSelecao);
+            Controls.Add(label1);
             Controls.Add(pbAreaDesenho);
             Controls.Add(stMensagem);
             Controls.Add(toolStrip1);
@@ -298,5 +342,9 @@
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton btnApagarTudo;
         private ColorDialog cdlgSelecionarCor;
+        private Label label1;
+        private Button btnUnicaSelecao;
+        private Button btnTodasSelecoes;
+        private ListBox lbFiguraSelecionada;
     }
 }

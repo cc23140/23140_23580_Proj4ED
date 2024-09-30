@@ -27,10 +27,11 @@ namespace Grafico
 
         //Polilinha
         bool esperaInicioPolilinha = false;
-        bool esperaFimPolilinha = false;
+        bool continuarPolilinha = false;
 
 
         private ListaSimples<Ponto> figuras = new ListaSimples<Ponto>();
+        private ListaSimples<Ponto> figurasSelecionadas = new ListaSimples<Ponto>();
         Polilinha polilinha;
 
         Color corAtual = Color.Black;
@@ -69,25 +70,52 @@ namespace Grafico
                             cor = Color.FromArgb(corR, corG, corB);
 
 
-                            switch (tipo[0])
+                            switch (tipo)
                             {
-                                case 'p': //figura é um ponto
+                                case "p": //figura é um ponto
                                     figuras.InserirAposFim(new Ponto(xBase, yBase, cor));
                                     break;
 
-                                case 'l': //figura é uma reta
+                                case "l": //figura é uma reta
                                     int xFinal = Convert.ToInt32(linha.Substring(30, 5).Trim());
                                     int yFinal = Convert.ToInt32(linha.Substring(35, 5).Trim());
                                     figuras.InserirAposFim(new Reta(xBase, yBase, xFinal, yFinal, cor));
                                     break;
 
-                                case 'c': //figura é um círculo
+                                case "c": //figura é um círculo
                                     int raio = Convert.ToInt32(linha.Substring(30, 5).Trim());
                                     figuras.InserirAposFim(new Circulo(xBase, yBase, raio, cor));
                                     break;
 
-                                case 'e': //figura é uma elipse
-                                          //TODO
+                                case "e": //figura é uma elipse
+                                    int largura = Convert.ToInt32(linha.Substring(30, 5).Trim());
+                                    int altura = Convert.ToInt32(linha.Substring(35, 5).Trim());
+                                    figuras.InserirAposFim(new Elipse(xBase, yBase, largura, altura, cor));
+                                    break;
+
+                                case "r":
+                                    int larg = Convert.ToInt32(linha.Substring(30, 5).Trim());
+                                    int alt = Convert.ToInt32(linha.Substring(35, 5).Trim());
+                                    figuras.InserirAposFim(new Retangulo(xBase, yBase, larg, alt, cor));
+                                    break;
+
+                                case "pl":
+                                    polilinha = new Polilinha(xBase, yBase, cor);
+
+                                    //Pega quantos pontos, ou seja, quantos loops necessários dentro do while para pegar todos os pontos do 
+                                    //polilinha
+                                    //Obs.: É subtraído -1 porque o xBase e o yBase já são pegos logo no começo
+                                    int quantasVoltas = Convert.ToInt32(linha.Substring(30, 5).Trim()) - 1;
+                                    int voltaSoma = 5;
+                                    while (quantasVoltas > 0)
+                                    {
+                                        int xPonto = Convert.ToInt32(linha.Substring(30 + voltaSoma, 5).Trim());
+                                        int yPonto = Convert.ToInt32(linha.Substring(35 + voltaSoma, 5).Trim());
+                                        polilinha.AdicionarPontoAposFim(new Ponto(xPonto, yPonto, polilinha.Cor));
+                                        voltaSoma += 10;
+                                        quantasVoltas--;
+                                    }
+                                    figuras.InserirAposFim(polilinha);
                                     break;
                             }
 
@@ -141,7 +169,7 @@ namespace Grafico
             esperaFimRetangulo = false;
 
             esperaInicioPolilinha = false;
-            esperaFimPolilinha = false;
+            continuarPolilinha = false;
 
 
         }
@@ -228,6 +256,25 @@ namespace Grafico
                 figuras.InserirAposFim(retangulo);
                 stMensagem.Items[1].Text = "";
             }
+            else if (esperaInicioPolilinha)
+            {
+                esperaInicioPolilinha = false;
+                polilinha = new Polilinha(e.X, e.Y, corAtual);
+                stMensagem.Items[1].Text = "Clique com o clique esquerdo do mouse para continuar o polilinha";
+                continuarPolilinha = true;
+            }
+            else if (e.Button == MouseButtons.Right) //Termina o polilinha se o usuário clicar com o clique direito do mouse
+            {
+                continuarPolilinha = false;
+                polilinha.Desenhar(polilinha.Cor, pbAreaDesenho.CreateGraphics());
+                figuras.InserirAposFim(polilinha);
+            }
+            else if (continuarPolilinha) //Continua o polilinha se o usuário não clicar com o clique direito do mouse
+            {
+                polilinha.AdicionarPontoAposFim(new Ponto(e.X, e.Y, corAtual));
+                stMensagem.Items[1].Text = "Clique com o clique direito para parar com o polilinha";
+            }
+
         }
 
         private void btnReta_Click(object sender, EventArgs e)
@@ -254,10 +301,18 @@ namespace Grafico
 
         private void btnApagarTudo_Click(object sender, EventArgs e)
         {
-            figuras = new ListaSimples<Ponto>();
-            pbAreaDesenho.Image = null;
-            limparEsperas();
-            stMensagem.Items[1].Text = "";
+            if (figurasSelecionadas.EstaVazia)
+            {
+                figuras = new ListaSimples<Ponto>();
+                pbAreaDesenho.Image = null;
+                limparEsperas();
+                stMensagem.Items[1].Text = "";
+            }
+            else //Se há figuras selecionadas...
+            {
+
+            }
+            
         }
 
         private void btnRetangulo_Click(object sender, EventArgs e)
@@ -288,7 +343,7 @@ namespace Grafico
             StreamWriter arqFiguras = new StreamWriter(this.Text);
             if (!figuras.EstaVazia)
             {
-                arqFiguras.WriteLine("0".PadLeft(5, ' ')+"0".PadLeft(5, ' ')+pbAreaDesenho.Width.ToString().PadLeft(5, ' ')+pbAreaDesenho.Height.ToString().PadLeft(5, ' '));
+                arqFiguras.WriteLine("0".PadLeft(5, ' ') + "0".PadLeft(5, ' ') + pbAreaDesenho.Width.ToString().PadLeft(5, ' ') + pbAreaDesenho.Height.ToString().PadLeft(5, ' '));
                 figuras.IniciarPercursoSequencial();
                 while (figuras.PodePercorrer())
                 {
@@ -300,7 +355,12 @@ namespace Grafico
             }
             Close();
 
-                
+
+        }
+
+        private void AtualizarListBox()
+        {
+
         }
     }
 }
