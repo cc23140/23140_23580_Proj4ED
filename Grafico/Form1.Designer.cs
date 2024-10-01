@@ -272,6 +272,7 @@
             btnUnicaSelecao.TabIndex = 5;
             btnUnicaSelecao.Text = "Única Seleção";
             btnUnicaSelecao.UseVisualStyleBackColor = true;
+            btnUnicaSelecao.Click += btnUnicaSelecao_Click;
             // 
             // btnTodasSelecoes
             // 
@@ -281,6 +282,7 @@
             btnTodasSelecoes.TabIndex = 6;
             btnTodasSelecoes.Text = "Todas as Seleções";
             btnTodasSelecoes.UseVisualStyleBackColor = true;
+            btnTodasSelecoes.Click += btnTodasSelecoes_Click;
             // 
             // lbFiguraSelecionada
             // 

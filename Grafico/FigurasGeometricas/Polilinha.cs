@@ -1,4 +1,7 @@
-﻿using System;
+﻿//João Pedro Valderrama dos Santos - 23140
+//Maria Eduarda Martins Costa - 23580
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +23,16 @@ namespace Grafico.FigurasGeometricas
             listaDePontos.InserirAposFim(ponto);
         }
 
-        public override void Desenhar(Color cor, Graphics g)
+        public override void Desenhar(Color cor, Graphics g, int espessura = 1)
         {
             if (listaDePontos.EstaVazia) 
                 return;
-            Pen pen = new Pen(cor);
+            Pen pen = new Pen(cor, espessura);
             listaDePontos.IniciarPercursoSequencial();
             Ponto p1 = listaDePontos.Atual.Info;
             listaDePontos.PercorrerUmElementoLista();
+
+            //Enquanto ainda haver pontos a percorrer, desenhar a linha gerada
             while (listaDePontos.PodePercorrer())
             {
                 Ponto p2 = listaDePontos.Atual.Info;

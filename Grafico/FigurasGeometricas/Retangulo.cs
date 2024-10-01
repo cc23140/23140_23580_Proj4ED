@@ -1,4 +1,7 @@
-﻿using System;
+﻿//João Pedro Valderrama dos Santos - 23140
+//Maria Eduarda Martins Costa - 23580
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +20,9 @@ namespace Grafico.FigurasGeometricas
             this.largura = largura;
         }
 
-        public override void Desenhar(Color cor, Graphics g)
+        public override void Desenhar(Color cor, Graphics g, int espessura = 1)
         {
-            Pen pen = new Pen(cor);
+            Pen pen = new Pen(cor, espessura);
             g.DrawRectangle(pen, base.X, base.Y, largura, altura);
         }
 

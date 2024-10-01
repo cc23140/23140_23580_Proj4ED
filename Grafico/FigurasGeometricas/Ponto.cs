@@ -1,4 +1,7 @@
-﻿using System;
+﻿//João Pedro Valderrama dos Santos - 23140
+//Maria Eduarda Martins Costa - 23580
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +21,15 @@ namespace Grafico.FigurasGeometricas
             this.cor = cor;
         }
 
-        public virtual void Desenhar(Color cor, Graphics g) //É colocado virtual para que o método seja sobrescrito depois
+
+        //Método modificado para a inserção de espessura diferente da padrão
+        public virtual void Desenhar(Color cor, Graphics g, int espessura = 1) //É colocado virtual para que o método seja sobrescrito depois
         {
             Brush brush = new SolidBrush(cor);
             g.FillEllipse(brush, x - 4, y - 4, 8, 8);
-            //g.DrawLine(pen, x, y, x, y);
         }
+
+
 
 
         public string transformaString(int valor, int qntasPosicoes)
